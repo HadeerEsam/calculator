@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Scientific Calculator</title>
+        <script src="calc.js"></script>
+        <link rel="stylesheet" href="calc.css">
+    </head>
+    <body>
+        <div id="background">
+           <div id="screen"><form name="calculator"><input type="text" name="display" class="screen"  readonly></form></div>
+           <table  id="buttons">
+                <tr>
+                    <td><button value="sin" type="button" class="black Button" onclick="math('sin')">Sin</button></td>
+                    <td><button value="Cos" type="button" class="black Button" onclick="math('cos')">Cos</button></td>
+                    <td><button value="Tan" type="button" class="black Button" onclick="math('tan')">Tan</button></td>
+                    <td><button value="(-)" type="button" class="black Button" onclick="changeSign()">(-)</button></td>
+                    <td><button value="ABS" type="button" class="black Button" onclick="math('abs')">|x|</button></td>
+                </tr>
+                <tr>
+                    <td><button value="sqrt" type="button" class="black Button" onclick="math('root')">√ </button></td>
+                    <td><button value="x²" type="button" class="black Button" onclick="math('sq')">x<sup>2</sup></button></td>
+                    <td><button value="xⁿ" type="button" class="black Button" onclick="insertOperator('^')">x<sup>n</sup></button></td>
+                    <td><button value="log" type="button" class="black Button" onclick="math('log')">log</button></td>
+                    <td><button value="ln" type="button" class="black Button" onclick="math('ln')">ln</button></td>
+                </tr>
+                <tr>
+                    <td><button value="CLR" type="button" class="black Button" onclick="clc()">CLR</button></td>
+                    <td><button value="(" type="button" class="black Button" onclick="insertOperator('(')">(</button></td>
+                    <td><button value=")" type="button" class="black Button" onclick="insertOperator(')')">)</button></td>
+                    <td><button value="%" type="button" class="black Button" onclick="insertOperator('%')">%</button></td>
+                    <td><button value="" type="button" class="black Button" onclick="math('cube')">x<sup>3</sup></button></td>
+                </tr>
+                <tr>
+                    <td><button value="7" type="button" class="silver Button" onclick="insertNum(7)">7</button></td>
+                    <td><button value="8" type="button" class="silver Button" onclick="insertNum(8)">8</button></td>
+                    <td><button value="9" type="button" class="silver Button" onclick="insertNum(9)">9</button></td>
+                    <td><button value="DEL" type="button" class="orange Button" onclick="del()">DEL</button></td>
+                    <td><button value="OFF" type="button" class="orange Button"onclick="clc()">OFF</button></td>
+                </tr>
+                
+                <tr>
+                    <td><button value="4" type="button" class="silver Button" onclick="insertNum(4)">4</button></td>
+                    <td><button value="5" type="button" class="silver Button" onclick="insertNum(5)">5</button></td>
+                    <td><button value="6" type="button" class="silver Button" onclick="insertNum(6)">6</button></td>
+                    <td><button value="x" type="button" class="silver Button" onclick="insertOperator('*')">x</button></td>
+                    <td><button value="÷" type="button" class="silver Button" onclick="insertOperator('/')">÷</button></td>
+                </tr>
+                <tr>
+                    <td><button value="1" type="button" class="silver Button" onclick="insertNum(1)">1</button></td>
+                    <td><button value="2" type="button" class="silver Button" onclick="insertNum(2)">2</button></td>
+                    <td><button value="3" type="button" class="silver Button" onclick="insertNum(3)">3</button></td>
+                    <td><button value="+" type="button" class="silver Button" onclick="insertOperator('+')">+</button></td>
+                    <td><button value="-" type="button" class="silver Button" onclick="insertOperator('-')">-</button></td>
+                </tr>
+                <tr>
+                    <td><button value="0" type="button" class="silver Button" onclick="insertNum(0)">0</button></td>
+                    <td><button value="." type="button" class="silver Button" onclick="insertDec()" >.</button></td>
+                    <td><button value="e(x)" type="button" class="silver Button" onclick="math('ex')">e(x)</button></td>
+                    <td><button value="π" type="button" class="silver Button" onclick="math('pi')">π</button></td>
+                    <td><button value="=" type="button" class="silver Button" onclick="equalTo()">=</button></td>
+                </tr>
+
+            </table>
+
+        </div>
+    </body>
+</html>
